@@ -24,12 +24,12 @@ public class MainActivity extends AppCompatActivity {
                 String username = usernameView.getText().toString();
                 String password = passwordView.getText().toString();
 
-                if (username.equals("test") && password.equals("pass")) {
+                if (username.equals("user") && password.equals("pass")) {
                     usernameView.setError(null);
                     Intent intent = new Intent(MainActivity.this, LoginEseguitoActivity.class);
                     startActivity(intent);
                 } else {
-                    usernameView.setError("Errore!!! Sei una patacca!!");
+                    usernameView.setError(getString(R.string.login_error));
                 }
             }
         });
